@@ -1,0 +1,219 @@
+.markdown-body {
+  /* 基础样式 */
+  color: var(--ui-text);
+  font-size: 16px;
+  line-height: 1.6;
+  
+  /* 标题样式 */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--ui-text);
+  }
+  
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.25em; }
+  
+  /* 段落样式 */
+  /* p {
+    margin-bottom: 16px;
+  } */
+  
+  /* 链接样式 */
+  a {
+    color: var(--ui-text);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  /* 代码块样式 */
+  pre {
+    background-color: #0d1117;
+    border-radius: 8px;
+    padding: 0.8em;
+    margin: 0.5em 0;
+    overflow-x: auto;
+  }
+  
+  pre code {
+    background-color: var(--ui-bg-muted);
+    padding: 0;
+    border-radius: 0;
+    font-family: 'JetBrains Mono', SFMono-Regular, Consolas, Menlo, monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  
+  /* 行内代码样式 */
+  :not(pre) > code {
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 4px;
+    font-size: 0.9em;
+    padding: 0.2em 0.4em;
+    font-family: 'JetBrains Mono', SFMono-Regular, Consolas, Menlo, monospace;
+  }
+  
+  /* 列表样式优化 */
+  ul, ol {
+    padding-left: 1.5em;
+    margin: 1.2em 0;
+  }
+  
+  li {
+    margin: 0.5em 0;
+    line-height: 1.6;
+    display: list-item;
+  }
+
+  li::marker {
+    color: var(--tw-prose-bullets);
+    font-size: 1.1em;
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
+
+  ul ul li {
+    list-style-type: circle;
+  }
+
+  ul ul ul li {
+    list-style-type: square;
+  }
+
+  .footnotes-sep {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: var(--ui-border);
+  }
+
+  .footnotes-list {
+    margin: 0;
+  }
+
+  .footnote-item{
+    font-size: small;
+    color: var(--ui-text-muted);
+  }
+  /* 表格样式 */
+  table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 1em 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  table tr {
+    background-color: var(--ui-bg);
+    border-top: 1px solid var(--ui-border);
+  }
+
+  table tr:nth-child(2n) {
+    background-color: var(--ui-bg-muted);
+  }
+
+  table th,
+  table td {
+    padding: 0.6em 1em;
+    border: 1px solid var(--ui-border);
+  }
+
+  table th {
+    font-weight: 600;
+    background-color: var(--ui-bg-muted);
+  }
+
+  /* 表格标题样式 */
+  table caption {
+    padding: 0.5em 0;
+    font-style: italic;
+    color: var(--ui-text-muted);
+  }
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .markdown-body {
+    color: var(--tw-prose-invert-body);
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--tw-prose-invert-headings);
+    }
+    
+    a {
+      color: var(--tw-prose-invert-links);
+    }
+    
+    pre {
+      background-color:  var(--ui-bg-muted);
+    }
+    
+    code {
+      background-color:  var(--ui-bg-muted);
+    }
+    
+    blockquote {
+      color: var(--tw-prose-invert-quotes);
+      border-left-color: var(--tw-prose-invert-quote-borders);
+    }
+    
+    table th,
+    table td {
+      border-color: var(--tw-prose-invert-td-borders);
+    }
+    
+    tr:nth-child(2n) {
+      background-color: var(--tw-prose-invert-tr-bg);
+    }
+    
+    hr {
+      background-color: var(--tw-prose-invert-hr);
+    }
+
+    li::marker {
+      color: var(--tw-prose-invert-bullets);
+    }
+  }
+}
+
+/* 代码块语言标签样式 */
+.markdown-body pre {
+  position: relative;
+}
+
+/* 方案1：使用 attr-value 和正则匹配 */
+.markdown-body pre code[class*="language-"]::before {
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  background: var(--ui-bg-muted);
+  color: var(--ui-text);
+  border-bottom-left-radius: 4px;
+  text-transform: lowercase;
+}
+
+/* 为每种语言单独设置 content */
+.markdown-body pre code.language-javascript::before { content: "javascript"; }
+.markdown-body pre code.language-typescript::before { content: "typescript"; }
+.markdown-body pre code.language-python::before { content: "python"; }
+.markdown-body pre code.language-vue::before { content: "vue"; }
+.markdown-body pre code.language-html::before { content: "html"; }
+.markdown-body pre code.language-css::before { content: "css"; }
+.markdown-body pre code.language-bash::before { content: "bash"; }
+.markdown-body pre code.language-json::before { content: "json"; }
