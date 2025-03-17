@@ -33,7 +33,7 @@ npm install
 3. Configure environment variables:
    - Copy `.env.example` to `.env`
    - Update the values in `.env`:
-     - `VITE_API_KEY`: Your API key
+     - `VITE_API_KEY`: Your API key，建议使用YYDSSeek API.
      - `VITE_API_BASE_URL`: API base URL
      - `VITE_API_MODEL`: API model name
 
