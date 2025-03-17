@@ -1,8 +1,22 @@
 # YYDS Seek Chat
 
-A Vue 3 chat component for YYDS Seek.
+一个轻量级Vue 3的LLM Chat组件。 来自[yydsseek.com](https://yydsseek.com/chat)
 
-## Setup
+## 预览
+
+![](./preview.jpg)
+
+## 特性
+
+- `LLM 聊天`
+- `Markdown`： 支持代码高亮、表格、Latex数学公示、Footnote脚注引用
+- 暗黑模式切换： 通过 vue
+- `深度思考`(Deepseek R1)。仅适用YYDSSeek API。
+- `网页搜索`: 支持简单搜索和复杂搜索。仅适用YYDSSeek API。
+- `节点策略(Router)`: 仅适用YYDSSeek API。
+
+
+## Demo 使用
 
 1. Clone the repository
 2. Install dependencies:
@@ -21,15 +35,3 @@ npm install
 ```bash
 npm run dev
 ```
-
-## Build
-
-```bash
-npm run build
-```
-
-## Preview
-
-```bash
-npm run preview
-``` 
