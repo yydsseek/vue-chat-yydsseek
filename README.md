@@ -16,6 +16,11 @@
 - `节点策略(Router)`: 仅适用YYDSSeek API。
 
 
+## 依赖
+
+- 见`package.json`,主要是`Nuxt/ui`,`tailwindcss`,`markdownit`等等
+
+
 ## Demo 使用
 
 1. Clone the repository
