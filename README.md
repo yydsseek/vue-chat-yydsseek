@@ -1,6 +1,6 @@
 # YYDS Seek Chat
 
-一个轻量级Vue 3的LLM Chat组件。 来自[yydsseek.com](https://yydsseek.com/chat)
+一个Vue 3的LLM Chat组件。 来自[yydsseek.com](https://yydsseek.com/chat)
 
 ## 预览
 

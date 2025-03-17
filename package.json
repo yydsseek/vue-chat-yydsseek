@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
+    "build:types": "vue-tsc && vite build",
     "preview": "vite preview"
   },
   "peerDependencies": {
