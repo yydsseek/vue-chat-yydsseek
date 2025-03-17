@@ -10,7 +10,8 @@
 
 - `LLM 聊天`
 - `Markdown`： 支持代码高亮、表格、Latex数学公示、Footnote脚注引用
-- 暗黑模式切换： 通过 vue
+- `暗黑模式`切换： 通过 useColorMode
+- `聊天记录`本地存储：通过IndexDB
 - `深度思考`(Deepseek R1)。仅适用YYDSSeek API。
 - `网页搜索`: 支持简单搜索和复杂搜索。仅适用YYDSSeek API。
 - `节点策略(Router)`: 仅适用YYDSSeek API。
