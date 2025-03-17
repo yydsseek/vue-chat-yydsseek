@@ -18,7 +18,7 @@
 
 ## 依赖
 
-- 见`package.json`,主要是`Nuxt/ui`,`tailwindcss`,`markdownit`等等
+- 见`package.json`,主要是`Nuxt/ui`,`tailwindcss`,`markdown-it`等等
 
 
 ## Demo 使用
